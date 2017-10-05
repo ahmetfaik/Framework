@@ -34,6 +34,10 @@
       <HintPath>..\..\packages\Autofac.4.0.1\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -81,11 +85,30 @@
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Common\SiteException.cs" />
     <Compile Include="Configuration\BaseConfig.cs" />
+    <Compile Include="Configuration\ISettings.cs" />
     <Compile Include="Configuration\WebConfig.cs" />
     <Compile Include="Data\DataSettings.cs" />
     <Compile Include="Data\DataSettingsManager.cs" />
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Domain\Common\GenericAttribute.cs" />
+    <Compile Include="Domain\Customers\Customer.cs" />
+    <Compile Include="Domain\Customers\CustomerPassword.cs" />
+    <Compile Include="Domain\Customers\CustomerRole.cs" />
+    <Compile Include="Domain\Customers\ExternalAuthentication\ExternalAuthenticationRecord.cs" />
+    <Compile Include="Domain\Customers\PasswordFormat.cs" />
+    <Compile Include="Domain\Directory\Currency.cs" />
+    <Compile Include="Domain\Directory\CurrencySettings.cs" />
+    <Compile Include="Domain\Directory\ExchangeRate.cs" />
+    <Compile Include="Domain\Directory\RoundingType.cs" />
+    <Compile Include="Domain\Localization\ILocalizedEntity.cs" />
+    <Compile Include="Domain\Localization\Language.cs" />
+    <Compile Include="Domain\Localization\LocaleStringResource.cs" />
+    <Compile Include="Domain\Localization\LocalizationSettings.cs" />
+    <Compile Include="Domain\Localization\LocalizedProperty.cs" />
+    <Compile Include="Domain\Security\PermissionRecord.cs" />
+    <Compile Include="Domain\Stores\IStoreMappingSupported.cs" />
+    <Compile Include="Domain\Stores\Store.cs" />
     <Compile Include="Fakes\FakeHttpContext.cs" />
     <Compile Include="Fakes\FakeHttpRequest.cs" />
     <Compile Include="Fakes\FakeHttpResponse.cs" />
@@ -94,17 +117,24 @@
     <Compile Include="Helper\IWebHelper.cs" />
     <Compile Include="Helper\WebHelper.cs" />
     <Compile Include="Helper\XmlHelper.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\ContainerManager.cs" />
     <Compile Include="Infrastructure\DependencyManagement\IDependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\EngineContext.cs" />
+    <Compile Include="Infrastructure\IEngine.cs" />
     <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\SiteEngine.cs" />
     <Compile Include="Infrastructure\TypeFinder\AppDomainTypeFinder.cs" />
     <Compile Include="Infrastructure\TypeFinder\ITypeFinder.cs" />
     <Compile Include="Infrastructure\TypeFinder\WebAppTypeFinder.cs" />
     <Compile Include="IPagedList.cs" />
+    <Compile Include="IStoreContext.cs" />
+    <Compile Include="IWorkContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using Framework.Core;
 using Framework.Core.Domain.Customers;
 using Framework.Core.Domain.Directory;
 using Framework.Core.Domain.Localization;
 using Framework.Core.Fakes;
+using Framework.Services.Authentication;
+using Framework.Services.Common;
+using Framework.Services.Customers;
+using Framework.Services.Directory;
+using Framework.Services.Localization;
+using Framework.Services.Stores;
 
 namespace Framework.Web.Framework
 {
@@ -19,7 +22,7 @@ namespace Framework.Web.Framework
     {
         #region Const
 
-        private const string CustomerCookieName = "Nop.customer";
+        private const string CustomerCookieName = "Framework.customer";
 
         #endregion
 
