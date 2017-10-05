@@ -92,11 +92,19 @@
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Common\GenericAttribute.cs" />
+    <Compile Include="Domain\Configuration\Setting.cs" />
     <Compile Include="Domain\Customers\Customer.cs" />
+    <Compile Include="Domain\Customers\CustomerExtensions.cs" />
+    <Compile Include="Domain\Customers\CustomerNameFormat.cs" />
     <Compile Include="Domain\Customers\CustomerPassword.cs" />
     <Compile Include="Domain\Customers\CustomerRole.cs" />
+    <Compile Include="Domain\Customers\CustomerSettings.cs" />
     <Compile Include="Domain\Customers\ExternalAuthentication\ExternalAuthenticationRecord.cs" />
     <Compile Include="Domain\Customers\PasswordFormat.cs" />
+    <Compile Include="Domain\Customers\SystemCustomerAttributeNames.cs" />
+    <Compile Include="Domain\Customers\SystemCustomerNames.cs" />
+    <Compile Include="Domain\Customers\SystemCustomerRoleNames.cs" />
+    <Compile Include="Domain\Customers\UserRegistrationType.cs" />
     <Compile Include="Domain\Directory\Currency.cs" />
     <Compile Include="Domain\Directory\CurrencySettings.cs" />
     <Compile Include="Domain\Directory\ExchangeRate.cs" />
@@ -109,6 +117,8 @@
     <Compile Include="Domain\Security\PermissionRecord.cs" />
     <Compile Include="Domain\Stores\IStoreMappingSupported.cs" />
     <Compile Include="Domain\Stores\Store.cs" />
+    <Compile Include="Domain\Stores\StoreExtensions.cs" />
+    <Compile Include="Domain\Stores\StoreMapping.cs" />
     <Compile Include="Fakes\FakeHttpContext.cs" />
     <Compile Include="Fakes\FakeHttpRequest.cs" />
     <Compile Include="Fakes\FakeHttpResponse.cs" />
@@ -121,6 +131,7 @@
     <Compile Include="Infrastructure\DependencyManagement\IDependencyRegistrar.cs" />
     <Compile Include="Infrastructure\EngineContext.cs" />
     <Compile Include="Infrastructure\IEngine.cs" />
+    <Compile Include="Infrastructure\IStartupTask.cs" />
     <Compile Include="Infrastructure\Singleton.cs" />
     <Compile Include="Infrastructure\SiteEngine.cs" />
     <Compile Include="Infrastructure\TypeFinder\AppDomainTypeFinder.cs" />
